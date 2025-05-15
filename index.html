@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge.in - Design Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bridge<span>.in</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Creative Solutions for Your Digital Needs</h1>
+                <p>We bridge the gap between your ideas and stunning visual content</p>
+                <a href="#services" class="btn">Explore Our Services</a>
+            </div>
+            <div class="hero-image">
+                <img src="asset/img/logo/logo.png" alt="Creative Design">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Professional creative solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <!-- CV Service -->
+                <div class="service-card" id="cv-service">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Professional CV Design</h3>
+                    <p>Stand out with our professionally designed CV templates</p>
+                    <button class="btn service-btn" data-service="cv">Order Now</button>
+                </div>
+                <!-- Banner Service -->
+                <div class="service-card" id="banner-service">
+                    <div class="service-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Banner Design</h3>
+                    <p>Eye-catching banners for your events and promotions</p>
+                    <button class="btn service-btn" data-service="banner">Order Now</button>
+                </div>
+                <!-- Pamphlet Service -->
+                <div class="service-card" id="pamphlet-service">
+                    <div class="service-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Pamphlet Design</h3>
+                    <p>Informative and attractive pamphlets for your business</p>
+                    <button class="btn service-btn" data-service="pamphlet">Order Now</button>
+                </div>
+                <!-- Instagram Feed Service -->
+                <div class="service-card" id="instagram-service">
+                    <div class="service-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram Feed Design</h3>
+                    <p>Cohesive and engaging Instagram content for your brand</p>
+                    <button class="btn service-btn" data-service="instagram">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from those who have experienced our services</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"Bridge.in transformed my resume completely. I got three interview calls within a week of updating my CV!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="asset/img/client/client1.png" alt="Client">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <p>Marketing Professional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"The Instagram feed design has helped my business gain more followers and engagement. Highly recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="asset/img/client/client2.png" alt="Client">
+                            <div>
+                                <h4>Michael Chen</h4>
+                                <p>Small Business Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"The banner they designed for our event was stunning. We received many compliments on the design!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="asset/img/client/client3.png" alt="Client">
+                            <div>
+                                <h4>Amanda Torres</h4>
+                                <p>Event Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Order Form</h2>
+            
+            <!-- General Order Form (for Banner, Pamphlet, Instagram) -->
+            <form id="general-order-form" class="order-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn">Submit Order</button>
+            </form>
+            
+            <!-- CV Order Form -->
+            <form id="cv-order-form" class="order-form">
+                <div class="form-group">
+                    <label for="cv-name">Name</label>
+                    <input type="text" id="cv-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="cv-phone">Phone Number</label>
+                    <input type="tel" id="cv-phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="cv-education">Education</label>
+                    <textarea id="cv-education" name="education" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cv-address">Address</label>
+                    <textarea id="cv-address" name="address" rows="2" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cv-skills">Skills</label>
+                    <textarea id="cv-skills" name="skills" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cv-profile">Profile Summary</label>
+                    <textarea id="cv-profile" name="profile" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cv-notes">Additional Notes</label>
+                    <textarea id="cv-notes" name="notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">Submit Order</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Receipt Modal -->
+    <div class="modal" id="receiptModal">
+        <div class="modal-content receipt-content">
+            <span class="close-modal close-receipt-modal">&times;</span>
+            <div class="receipt-header">
+                <h2>Order Receipt</h2>
+                <div class="logo">
+                    <h1>Bridge<span>.in</span></h1>
+                </div>
+            </div>
+            
+            <div class="receipt-details">
+                <div class="receipt-row">
+                    <span class="receipt-label">Order Number:</span>
+                    <span class="receipt-value" id="receipt-order-number">BRG-230101-0001</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Date:</span>
+                    <span class="receipt-value" id="receipt-date">January 1, 2023 12:00 PM</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Service:</span>
+                    <span class="receipt-value" id="receipt-service">CV Design</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Name:</span>
+                    <span class="receipt-value" id="receipt-name">John Doe</span>
+                </div>
+                <div class="receipt-row">
+                    <span class="receipt-label">Phone:</span>
+                    <span class="receipt-value" id="receipt-phone">+62 812 3456 7890</span>
+                </div>
+                
+                <!-- CV-specific details -->
+                <div id="cv-details-section">
+                    <div class="receipt-row">
+                        <span class="receipt-label">Photo:</span>
+                        <span class="receipt-value" id="receipt-photo">No photo required</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Education:</span>
+                        <span class="receipt-value" id="receipt-education">Bachelor's Degree in Design</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Address:</span>
+                        <span class="receipt-value" id="receipt-address">123 Main Street, City</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Skills:</span>
+                        <span class="receipt-value" id="receipt-skills">Graphic Design, UI/UX, Photography</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span class="receipt-label">Profile:</span>
+                        <span class="receipt-value" id="receipt-profile">Experienced designer with 5 years of experience</span>
+                    </div>
+                </div>
+                
+                <div class="receipt-row">
+                    <span class="receipt-label">Notes:</span>
+                    <span class="receipt-value" id="receipt-notes">No additional notes</span>
+                </div>
+            </div>
+            
+            <div class="receipt-message">
+                <p>Thank you for your order! Please wait for confirmation from our admin team.</p>
+                <p>Your order has been received and is being processed. Our team will contact you shortly.</p>
+            </div>
+            
+            <div class="receipt-actions">
+                <a href="#" id="whatsapp-link" class="btn whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Order Now
+                </a>
+                <button id="download-receipt" class="btn download-btn">
+                    <i class="fas fa-download"></i> Download Receipt
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAPTCHA Modal -->
+    <div class="modal" id="captchaModal">
+        <div class="modal-content captcha-modal-content">
+            <span class="close-modal close-captcha-modal">&times;</span>
+            <h2>Security Verification</h2>
+            <p>Please complete the security check below to continue.</p>
+            
+            <div class="captcha-container">
+                <div class="captcha-image" id="captcha-image">
+                    <!-- CAPTCHA text will be generated here -->
+                </div>
+                <input type="text" class="captcha-input" id="captcha-input" placeholder="Enter the code above">
+                <button class="refresh-captcha" id="refresh-captcha">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+            
+            <button class="btn" id="verify-captcha">Verify & Continue</button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? Reach out to us directly</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Creative Street, Design District</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+62 812 3456 7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@bridge.in</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Bridge<span>.in</span></h2>
+                    <p>Bridging creativity with purpose</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#cv-service">CV Design</a></li>
+                        <li><a href="#banner-service">Banner Design</a></li>
+                        <li><a href="#pamphlet-service">Pamphlet Design</a></li>
+                        <li><a href="#instagram-service">Instagram Feed</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates and offers</p>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Bridge.in. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- html2canvas library for receipt download -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</body>
+</html>
